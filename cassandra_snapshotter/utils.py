@@ -31,7 +31,6 @@ base_parser.add_argument('-v', '--verbose',
                          action='store_true',
                          help='increase output verbosity')
 
-
 def add_s3_arguments(arg_parser):
     """
     Adds common S3 argument to a parser
@@ -57,6 +56,18 @@ def add_s3_arguments(arg_parser):
     arg_parser.add_argument('--s3-base-path',
                             required=True,
                             help="S3 base path for backups.")
+
+    arg_parser.add_argument('--nodetool-path',
+                            default='/etc/cassandra/bin',
+                            help="The path of nodetool binary.")
+
+    arg_parser.add_argument('--cassandra-bin-dir',
+                            default='/usr/bin',
+                            help="The cassandra bin dir.")
+
+    arg_parser.add_argument('--cassandra-conf-path',
+                            default='/etc/cassandra/conf',
+                            help="assandra config file path.")
 
     return arg_parser
 

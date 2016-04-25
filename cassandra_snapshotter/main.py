@@ -168,21 +168,6 @@ def main():
         help="The table (column family) to backup")
 
     backup_parser.add_argument(
-        '--cassandra-conf-path',
-        default='/etc/cassandra/conf/',
-        help="cassandra config file path")
-
-    backup_parser.add_argument(
-        '--nodetool-path',
-        default=None,
-        help="nodetool path")
-
-    backup_parser.add_argument(
-        '--cassandra-bin-dir',
-        default='/usr/bin',
-        help="cassandra binaries directory")
-
-    backup_parser.add_argument(
         '--user',
         help="The ssh user to logging on nodes")
 
