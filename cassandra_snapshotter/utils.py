@@ -31,6 +31,7 @@ base_parser.add_argument('-v', '--verbose',
                          action='store_true',
                          help='increase output verbosity')
 
+
 def add_s3_arguments(arg_parser):
     """
     Adds common S3 argument to a parser
